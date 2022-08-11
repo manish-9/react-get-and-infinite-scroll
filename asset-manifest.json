@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-get-and-infinite-scroll/static/css/main.a020b14b.css",
+    "main.js": "/react-get-and-infinite-scroll/static/js/main.0fb8527c.js",
+    "index.html": "/react-get-and-infinite-scroll/index.html",
+    "main.a020b14b.css.map": "/react-get-and-infinite-scroll/static/css/main.a020b14b.css.map",
+    "main.0fb8527c.js.map": "/react-get-and-infinite-scroll/static/js/main.0fb8527c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a020b14b.css",
+    "static/js/main.0fb8527c.js"
+  ]
+}
