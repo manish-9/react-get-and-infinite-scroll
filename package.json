@@ -1,8 +1,8 @@
 {
-  "homepage": "http://manish-9.github.io/react-get-and-infinite-scroll",
+  "homepage": "https://manish-9.github.io/react-get-and-infinite-scroll",
   "name": "pagination-task",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
