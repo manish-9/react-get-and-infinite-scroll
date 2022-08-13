@@ -6,6 +6,7 @@ function App2() {
   const [products, setProducts] = useState([]);
   let nextFive = 10;
 
+  // method for api call to get products data..
   const getProducts = async () => {
     axios
       .get(`https://dummyjson.com/products?limit=${nextFive}`)
@@ -13,16 +14,17 @@ function App2() {
         let i = 0;
         const newProducts = [];
         res.data.products.forEach((product) => {
-          newProducts[i] = product;
+          newProducts[i] = product;   // storing individual product data in newProducts array
 
           i++;
 
-          console.log(`i = ${i}`);
+//           console.log(`i = ${i}`);
         });
         setProducts((oldProducts) => [...oldProducts, ...newProducts]);
       });
   };
 
+  // event Handler for handling scroll event..
   const scrollHandler = (scrollEvent) => {
     // console.log("scroll top: ", scrollEvent.target.documentElement.scrollTop);
     // console.log("scroll Height: ", scrollEvent.target.documentElement.scrollHeight);
@@ -34,13 +36,12 @@ function App2() {
       scrollEvent.target.documentElement.scrollTop + window.innerHeight + 1 >=
       scrollEvent.target.documentElement.scrollHeight
     ) {
-      nextFive = 5;
-      getProducts();
+      nextFive = 5;   // to load next five products after scrolling to the bottom of the current product list
+      getProducts();  // making rest api call for getting next five product details
     }
   };
 
   useEffect(() => {
-    // api call to get products data..
     getProducts();
 
     // to handle users scroll event for loading new content upon reaching the bottom of scroll
@@ -55,7 +56,6 @@ function App2() {
             <img className="productImg" src={product.thumbnail} />
             <br />
             {product.title}
-            {/* {console.log(products)} */}
           </span>
         </div>
       ))}
